@@ -1,7 +1,14 @@
 const router = require('express').Router()
+const Accounts = require ('./accounts-model')
 
 router.get('/', (req, res, next) => {
   // DO YOUR MAGIC
+  try {
+    const data = await Accounts.get()
+    res.json(data)
+  } catch (err) {
+    next(err)
+  }
 })
 
 router.get('/:id', (req, res, next) => {
