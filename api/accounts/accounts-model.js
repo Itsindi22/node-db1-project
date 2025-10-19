@@ -3,12 +3,10 @@ const { checkAccountId } = require('./accounts-middleware')
 const getAll = () => {
   // DO YOUR MAGIC
   //  .select('phone', 'shippername')
-  return result
 }
 
 const getById = id => {
   // DO YOUR MAGIC
-  const result = await db ('account').where('accountid',checkAccountId)
   
 }
 
