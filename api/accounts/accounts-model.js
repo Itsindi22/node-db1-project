@@ -1,14 +1,17 @@
 const db = require ('../../data/db-config')
+
 const { checkAccountId } = require('./accounts-middleware')
 const getAll = () => {
   // DO YOUR MAGIC
-  //  .select('phone', 'shippername')
+  //  seclect  * from accounts
+  return db ('accounts')
 }
 
 const getById = id => {
   // DO YOUR MAGIC
-  
-}
+  // select * from  account; where id = 1;
+  return db('accounts').where('id', id).first()
+  }
 
 const create = account => {
   // DO YOUR MAGIC
