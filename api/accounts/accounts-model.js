@@ -1,6 +1,5 @@
 const db = require ('../../data/db-config')
 
-const { checkAccountId } = require('./accounts-middleware')
 const getAll = () => {
   // DO YOUR MAGIC
   //  seclect  * from accounts
